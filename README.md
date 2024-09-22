@@ -1,4 +1,4 @@
-# rubberduck-steal-passwords-and-send-via-email
+# rubberduck-steal-wifi-passwords-and-send-via-email
 simple script that steals your saved passwords from a PC and sends them via email.
 
 # How to use
