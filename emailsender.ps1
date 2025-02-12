@@ -25,5 +25,3 @@ $SMTPClient.EnableSsl = $true
 $SMTPClient.Credentials = New-Object System.Net.NetworkCredential($smtpUser, $smtpPass)
 
 $SMTPClient.Send($emailMessage)
-
-"Email sent successfully!"
